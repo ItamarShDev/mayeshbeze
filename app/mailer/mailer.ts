@@ -1,20 +1,9 @@
 import type { Transporter } from "nodemailer";
 import { createTransport } from "nodemailer";
+import { setOauth2Client } from "~/mailer/oauth2";
 import type { Email } from "~/mailer/types";
-const { google } = require("googleapis");
 
-function setOauth2Client() {
-  const OAuth2Client = new google.auth.OAuth2(
-    process.env.OAUTH_CLIENT_ID,
-    process.env.OAUTH_CLIENT_SECRET
-  );
-
-  OAuth2Client.setCredentials({
-    refresh_token: process.env.OAUTH_CLIENT_REFRESH_TOKEN,
-  });
-  return OAuth2Client.getAccessToken();
-}
-export function connect(): Promise<Transporter> {
+function connect(): Promise<Transporter> {
   return new Promise((resolve, reject) => {
     const token = setOauth2Client();
 
@@ -48,7 +37,7 @@ export default async function sendMail({ name, email, message }: Email) {
     return await new Promise<void>((resolve, reject) => {
       const mail = {
         from: `${name} <${email}>`,
-        to: "itamarsharifytech@gmail.com",
+        to: "ideas@mayeshbeze.com",
         subject: `New idea from ${name}`,
         html: `<p>Name: ${name}</p>
              <p>Email: ${email}</p>

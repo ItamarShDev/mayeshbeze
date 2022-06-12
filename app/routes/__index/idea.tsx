@@ -3,6 +3,10 @@ import { json } from "@remix-run/node";
 import { useActionData } from "@remix-run/react";
 import { Error, Success } from "~/components/alerts";
 import sendMail from "~/mailer/mailer";
+import styles from "~/styles/idea.css";
+export function links() {
+  return [{ rel: "stylesheet", href: styles }];
+}
 
 export const action: ActionFunction = async ({ request }) => {
   if (request.method !== "POST") {
@@ -35,21 +39,21 @@ export default function Index() {
   const actionData = useActionData();
 
   return (
-    <div>
+    <div className="ideas-container">
       <form method="post">
         {actionData?.error && <Error message={actionData.error} />}
         {actionData?.message && <Success message={actionData.message} />}
         <label className={actionData?.email && "invalid"}>
-          email: <input type="email" name="email" required />
+          אימייל: <input type="email" name="email" required />
         </label>
         <label className={actionData?.name && "invalid"}>
-          name: <input type="name" name="name" required />
+          שם: <input type="name" name="name" required />
         </label>
         <label className={actionData?.message && "invalid"}>
-          idea: <textarea name="message" required />
+          רעיון: <textarea name="message" required />
         </label>
         <button type="submit" className="button">
-          Add
+          שלח
         </button>
       </form>
     </div>

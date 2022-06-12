@@ -1,0 +1,53 @@
+.ideas-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  border: 1px solid #50c6e0;
+  box-sizing: content-box;
+  padding: 3rem;
+}
+
+.invalid {
+  border-color: red;
+  color: red;
+  accent-color: red;
+}
+
+label {
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-family: "Courier New", Courier, monospace;
+}
+input,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  font-family: "Courier New", Courier, monospace;
+}
+textarea {
+  height: 10rem;
+}
+button {
+  all: unset;
+  padding: 0.5rem;
+  background-color: #50c6e0;
+  border-radius: 0.75rem;
+  font-weight: bold;
+  color: #293375;
+}

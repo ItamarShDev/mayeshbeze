@@ -1,0 +1,22 @@
+.icons {
+  display: flex;
+  direction: rtl;
+  justify-content: start;
+  gap: 2rem;
+  padding-block: 1rem;
+}
+.icons img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.credit {
+  font-size: 0.5rem;
+  color: lightgray;
+  opacity: 0.2;
+  text-decoration: none;
+}
+.about {
+  max-width: fit-content;
+  text-overflow: clip;
+  padding: 2rem;
+}
