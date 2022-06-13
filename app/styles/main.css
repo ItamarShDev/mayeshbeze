@@ -7,6 +7,10 @@ body {
   direction: rtl;  
 }
 
+main {
+  height: 100vh;
+}
+
 .header {
   display: flex;
   flex-direction: column;
