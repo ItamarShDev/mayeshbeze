@@ -21,7 +21,7 @@ export default function Index() {
         <Link to="/feed?limit=5">פרקים</Link>
         <Link to="/idea">יש לי בובה של רעיון!</Link>
       </header>
-      <section style={{ overflowY: "scroll" }}>
+      <section>
         <Outlet />
       </section>
     </main>

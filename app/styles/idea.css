@@ -1,7 +1,7 @@
 .ideas-container {
   display: flex;
-  width: 100vw;
-  height: 100vh;
+  height: inherit;
+  width: 100%;
   justify-content: center;
   align-items: center;
 }
@@ -14,6 +14,8 @@ form {
   border: 1px solid #50c6e0;
   box-sizing: content-box;
   padding: 3rem;
+  flex: 1;
+  max-width: min(80%, 800px);
 }
 
 .invalid {
@@ -23,12 +25,9 @@ form {
 }
 
 label {
-  width: auto;
-  max-width: 80vw;
-  direction: rtl;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 0.5rem;
   font-size: 1.5rem;
   font-family: "Courier New", Courier, monospace;
