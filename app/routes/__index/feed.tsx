@@ -26,7 +26,7 @@ export default function Feed() {
   const limit = searchParams.get("limit") || "5";
   const { count, collection } = latestEpisodes;
   return (
-    <div style={{ display: "block" }}>
+    <div className="feed">
       <h1>פיד</h1>
       <EpisodeCount count={count} />
       <Episodes episodes={collection as EpisodeType[]} />

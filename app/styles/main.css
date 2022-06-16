@@ -3,12 +3,13 @@ body {
     url(/logo.webp);
   background-size: cover;
   background-repeat: no-repeat;
-  overflow: hidden;
-  direction: rtl;  
+  background-position: center;
+  direction: rtl;
 }
 
-main {
+#main {
   height: 100vh;
+  overflow: auto;
 }
 
 .header {
@@ -31,14 +32,13 @@ main {
 .header a:hover {
   text-decoration: underline double;
 }
-section {
+main {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  height: 100%;
+  padding: 1rem;
   align-items: center;
   grid-column: 1 / 3;
-  overflow-y: auto;
 }
 * {
   font-family: "Courier New", Courier, monospace;

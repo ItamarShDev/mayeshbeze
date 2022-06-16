@@ -15,15 +15,15 @@ export const links: LinksFunction = () => {
 };
 export default function Index() {
   return (
-    <main>
+    <div id="main">
       <header className="header">
         <Link to="/">על הפודקאסט</Link>
         <Link to="/feed?limit=5">פרקים</Link>
         <Link to="/idea">יש לי בובה של רעיון!</Link>
       </header>
-      <section>
+      <main>
         <Outlet />
-      </section>
-    </main>
+      </main>
+    </div>
   );
 }
