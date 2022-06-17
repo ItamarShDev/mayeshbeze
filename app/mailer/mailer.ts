@@ -11,7 +11,7 @@ function connect(): Promise<Transporter> {
       service: "gmail",
       auth: {
         type: "OAuth2",
-        user: "mayeshbezeideas@gmail.com",
+        user: process.env.CLIENT_EMAIL,
         clientId: process.env.OAUTH_CLIENT_ID,
         clientSecret: process.env.OAUTH_CLIENT_SECRET,
         refreshToken: process.env.OAUTH_CLIENT_REFRESH_TOKEN,
@@ -37,7 +37,7 @@ export default async function sendMail({ name, email, message }: Email) {
     return await new Promise<void>((resolve, reject) => {
       const mail = {
         from: `${name} <${email}>`,
-        to: "ideas@mayeshbeze.com",
+        to: process.env.MYBZ_EMAIL,
         subject: `New idea from ${name}`,
         html: `<p>Name: ${name}</p>
              <p>Email: ${email}</p>

@@ -19,8 +19,6 @@ export const loader: LoaderFunction = async ({ request }) => {
   });
 };
 function DistributionChannels({ channels }) {
-  console.log(channels?.collection);
-
   return <div></div>;
 }
 
