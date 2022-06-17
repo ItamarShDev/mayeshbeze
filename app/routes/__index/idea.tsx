@@ -39,23 +39,28 @@ export default function Index() {
   const actionData = useActionData();
 
   return (
-    <div className="ideas-container">
-      <form method="post">
-        {actionData?.error && <Error message={actionData.error} />}
-        {actionData?.message && <Success message={actionData.message} />}
-        <label className={actionData?.email && "invalid"}>
-          אימייל: <input type="email" name="email" required />
-        </label>
-        <label className={actionData?.name && "invalid"}>
-          שם: <input type="name" name="name" required />
-        </label>
-        <label className={actionData?.message && "invalid"}>
-          רעיון: <textarea name="message" required />
-        </label>
-        <button type="submit" className="button">
-          שלח
-        </button>
-      </form>
-    </div>
+    <>
+      <div>
+        <h2>יש לך רעיון לפרק מטורף? ניתן לשלוח מכאן רעיון ישירות לקובי!</h2>
+      </div>
+      <div className="ideas-container">
+        <form method="post">
+          {actionData?.error && <Error message={actionData.error} />}
+          {actionData?.message && <Success message={actionData.message} />}
+          <label className={actionData?.email && "invalid"}>
+            אימייל: <input type="email" name="email" required />
+          </label>
+          <label className={actionData?.name && "invalid"}>
+            שם: <input type="name" name="name" required />
+          </label>
+          <label className={actionData?.message && "invalid"}>
+            רעיון: <textarea name="message" required />
+          </label>
+          <button type="submit" className="button">
+            שלח
+          </button>
+        </form>
+      </div>
+    </>
   );
 }

@@ -18,13 +18,10 @@ export const loader: LoaderFunction = async ({ request }) => {
     distribution: await distribution.json(),
   });
 };
-function DistributionChannels({ channels }) {
-  return <div></div>;
-}
 
 export default function Index() {
   const data = useLoaderData();
-  const { copyright, description, title, distribution } = data;
+  const { copyright, description, title } = data;
   return (
     <div className="about">
       <h1>על הפודקאסט</h1>
@@ -34,7 +31,6 @@ export default function Index() {
 
       <p>{description}</p>
       <p>{copyright}</p>
-      <DistributionChannels channels={distribution} />
       <Socials />
     </div>
   );
