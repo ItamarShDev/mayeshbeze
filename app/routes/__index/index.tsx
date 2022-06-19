@@ -29,7 +29,7 @@ export default function Index() {
         <h2>{title}</h2>
       </a>
 
-      <p>{description}</p>
+      <h3>{description}</h3>
       <p>{copyright}</p>
       <Socials />
     </div>
