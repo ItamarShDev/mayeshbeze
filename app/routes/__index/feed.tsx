@@ -41,6 +41,7 @@ export default function Feed() {
       <Episodes episodes={collection as EpisodeType[]} />
       <div className="more">
         <button
+          data-type="more"
           onClick={() => setFetch(fetch + 5)}
           disabled={fetcher.state == "loading"}
         >

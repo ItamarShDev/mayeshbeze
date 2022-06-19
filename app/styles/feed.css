@@ -4,3 +4,9 @@
 .feed {
   display: block;
 }
+button[data-type="more"] {
+  all: unset;
+}
+button[data-type="more"]:hover {
+  text-decoration: underline;
+}
