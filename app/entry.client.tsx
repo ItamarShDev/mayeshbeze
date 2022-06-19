@@ -9,9 +9,9 @@ declare global {
   }
 }
 
-// Sentry.init({
-//   dsn: window.GLOBALS.SENTRY_DSN,
-//   tracesSampleRate: 1.0,
-//   integrations: [new Integrations.BrowserTracing()],
-// });
+Sentry.init({
+  dsn: window.GLOBALS.SENTRY_DSN,
+  tracesSampleRate: 1.0,
+  integrations: [new Integrations.BrowserTracing()],
+});
 hydrate(<RemixBrowser />, document);

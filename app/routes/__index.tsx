@@ -18,7 +18,7 @@ export default function Index() {
     <div id="main">
       <header className="header">
         <Link to="/">על הפודקאסט</Link>
-        <Link to="/feed?limit=5">פרקים</Link>
+        <Link to="/feed">פרקים</Link>
         <Link to="/idea">יש לי בובה של רעיון!</Link>
       </header>
       <main>
