@@ -20,6 +20,7 @@ export default function Index() {
         <Link to="/">על הפודקאסט</Link>
         <Link to="/feed">פרקים</Link>
         <Link to="/idea">יש לי בובה של רעיון!</Link>
+        <Link to="/map">פרקים על המפה</Link>
       </header>
       <main>
         <Outlet />

@@ -1,0 +1,9 @@
+section {
+  flex: 1;
+  align-self: stretch;
+  padding: 3rem;
+}
+.map {
+  height: 100%;
+  width: 100%;
+}
