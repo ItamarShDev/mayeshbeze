@@ -1,9 +1,12 @@
+import { Link } from "@remix-run/react";
 import type { EpisodeType } from "~/components/Episodes/types";
 
 export default function Episode({ episode }: { episode: EpisodeType }) {
   return (
     <div className="episode">
-      <h2>{episode.title}</h2>
+      <Link to={`/episodes/${episode.id}`}>
+        <h2>{episode.title}</h2>
+      </Link>
       <time dateTime={episode.published_at}>
         {new Date(episode.published_at).toLocaleString("he")}
       </time>
